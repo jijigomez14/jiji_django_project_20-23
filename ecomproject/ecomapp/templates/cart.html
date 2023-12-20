@@ -1,0 +1,45 @@
+{% load static %}
+{% include 'header.html' %}
+{% include 'navbar.html' %}
+
+{% block body %}
+
+<!-- Cart Section -->
+<section class="cart_section layout_padding">
+    <div class="container">
+        <h2>Your Cart</h2>
+        
+        <!-- Cart items -->
+        <div class="cart_items">
+            <!-- Product 1 -->
+            <div class="cart_item">
+                <div class="product_image">
+                    <img src="{% static 'images/p1.png' %}" alt="Product Image">
+                </div>
+                <div class="product_details">
+                    <h3>Men's Shirt</h3>
+                    <p>Price: $75</p>
+                    <p>Quantity: 1</p>
+                </div>
+                <div class="actions">
+                    <button onclick="removeFromCart(1)">Remove</button>
+                </div>
+            </div>
+            
+            <!-- Add more products similarly -->
+            
+        </div>
+        
+        <!-- Cart summary -->
+        <div class="cart_summary">
+            <h3>Cart Summary</h3>
+            <p>Total Items: 1</p>
+            <p>Total Price: $75</p>
+            <button onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% include 'footer.html' %}
